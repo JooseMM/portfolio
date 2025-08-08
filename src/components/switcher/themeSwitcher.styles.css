@@ -1,0 +1,50 @@
+@import "../../index.css";
+
+.switcher {
+  background-color: var(--color-tertiary);
+  background-image: url("icons/sun-disable.svg"), url("icons/moon-disable.svg");
+  background-position:
+    20% center,
+    80% center;
+  background-size: 1.8rem, 1.5rem;
+  padding: 0.4rem;
+  background-repeat: no-repeat;
+  width: 6rem;
+  border-radius: 5rem;
+}
+
+.switcher__current_theme {
+  padding: 0.5rem;
+  border-radius: 5rem;
+  width: 2.5rem;
+  background-color: var(--color-secundary);
+  transition: 300ms ease-in;
+  transform: translateX(0);
+}
+
+.switcher__current_theme img {
+  transition: 300ms ease-in;
+  width: 1.4rem;
+}
+
+.switcher--dark {
+  transform: translateX(2.65rem);
+}
+
+.switcher--animation {
+  animation: spin 300ms ease-in;
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+    transform: rotate(360deg);
+  }
+}
