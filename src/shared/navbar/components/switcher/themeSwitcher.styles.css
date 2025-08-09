@@ -1,5 +1,3 @@
-@import "../../index.css";
-
 .switcher {
   background-color: var(--color-tertiary);
   background-image: url("icons/sun-disable.svg"), url("icons/moon-disable.svg");

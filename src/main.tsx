@@ -2,18 +2,19 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router";
-import { HomePage } from "./page/home/Home.page";
-import { ContactPage } from "./page/contact/Contact.page";
-import { Navbar } from "./components/navbar/navbar.component";
+import { Navbar } from "./shared/navbar/navbar.component";
+import { HomePage } from "./home/home.page";
+import { UIProvider } from "./shared/utils/context/provider.context";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Navbar />
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="contact" element={<ContactPage />} />
-      </Routes>
-    </BrowserRouter>
+    <UIProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route index element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </UIProvider>
   </StrictMode>,
 );
