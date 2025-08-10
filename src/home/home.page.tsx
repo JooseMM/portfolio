@@ -1,4 +1,4 @@
-import { HeroSection } from "./section/hero/hero.styles";
+import { HeroSection } from "./section/hero/hero.section";
 
 export const HomePage = () => {
   return (

@@ -1,0 +1,15 @@
+export const SkillOptions = {
+  TYPESCRIPT: 0,
+  EXPRESS: 1,
+  TAILWINDCSS: 2,
+  FIGMA: 3,
+  ANGULAR: 4,
+  REACT: 5,
+  HTML: 6,
+  CSS: 7,
+  NESTJS: 8,
+  MONGODB: 9,
+  SQL: 10,
+  KOTLIN: 11,
+  ANDROID: 12,
+};

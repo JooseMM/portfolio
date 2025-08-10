@@ -18,4 +18,8 @@ export const setTheme = (isDakTheme: boolean, root: HTMLElement) => {
     ThemeCSSVariable.TEXT,
     isDakTheme ? ThemeCSSColor.OCTONARY : ThemeCSSColor.SEPTENARY,
   );
+  root.style.setProperty(
+    ThemeCSSVariable.SKILL_BACKGROUND,
+    isDakTheme ? "#4C8080" : "#BECCCC",
+  );
 };

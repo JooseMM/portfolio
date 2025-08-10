@@ -46,3 +46,9 @@
     transform: rotate(360deg);
   }
 }
+
+@media (min-width: 65rem) {
+  .switcher:hover {
+    outline: 1px solid var(--color-secundary);
+  }
+}

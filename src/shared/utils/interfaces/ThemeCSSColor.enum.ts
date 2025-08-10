@@ -7,4 +7,5 @@ export const ThemeCSSColor = {
   SENARY: "#c3d9d9",
   SEPTENARY: "#272727",
   OCTONARY: "#FFF",
+  NONARY: "#475959",
 } as const;
