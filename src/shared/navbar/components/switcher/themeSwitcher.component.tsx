@@ -1,5 +1,5 @@
+import "./themeSwitcher.style.css";
 import { useState } from "react";
-import "./themeSwitcher.styles.css";
 import LightThemeIcon from "./icons/sun-enable.svg";
 import DarkThemeIcon from "./icons/moon-enable.svg";
 import { useUI } from "../../../utils/context/hook.context";

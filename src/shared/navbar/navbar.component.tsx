@@ -1,9 +1,9 @@
+import "./navbar.style.css";
 import { NavLink } from "react-router";
 import { useUI } from "../utils/context/hook.context";
 import { ThemeOptions } from "../utils/interfaces/Theme.enum";
 import { HamburguerMenu } from "./components/hamburguer/hamburguerMenu.component";
 import { ThemeSwitcher } from "./components/switcher/themeSwitcher.component";
-import "./navbar.styles.css";
 import { useEffect, useState } from "react";
 import { useDeviceType } from "../utils/customHooks/useCurrentDeviceType.hook";
 import { DeviceTypeOptions } from "../utils/interfaces/DeviceTypeOptions.enum";

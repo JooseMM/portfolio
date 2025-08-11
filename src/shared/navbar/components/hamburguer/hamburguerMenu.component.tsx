@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Hamburguer } from "./components/hamburguer.icon";
 import { CloseMenu } from "./components/closeMenu.icon";
-import "./hamburguerMenu.styles.css";
 import { useUI } from "../../../utils/context/hook.context";
+import "./hamburguerMenu.style.css";
 
 export const HamburguerMenu = () => {
   const { mobileMenuOpen, toggleMobileMenu } = useUI();

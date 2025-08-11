@@ -1,6 +1,6 @@
 .button {
   background-color: var(--color-accent);
-  color: #fff;
+  color: #FFF;
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -11,4 +11,12 @@
 
 .button:hover {
   opacity: 0.8;
+}
+
+.button--secundary {
+  background-color: transparent;
+  color: var(--color-text);
+}
+.button--disable {
+ opacity: 0.4rem;
 }

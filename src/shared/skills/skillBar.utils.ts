@@ -40,4 +40,5 @@ export const SKILL_LIST = {
 export interface SkillBarProps {
   skillList: Skill[];
   isVertical?: boolean;
+  style?: React.CSSProperties;
 }

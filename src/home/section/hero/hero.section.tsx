@@ -1,4 +1,4 @@
-import "./hero.styles.css";
+import "./hero.style.css";
 import HeroImage from "./images/hero-image.png";
 import { Button } from "../../../shared/button/button.component";
 import { Arrow } from "./components/arrow.icon";
