@@ -1,6 +1,6 @@
 .button {
   background-color: var(--color-accent);
-  color: #FFF;
+  color: #fff;
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -9,8 +9,8 @@
   transition: 300ms ease-in;
 }
 
-.button:hover {
-  opacity: 0.8;
+.button:not(.button--disable):hover {
+  opacity: 0.5;
 }
 
 .button--secundary {
@@ -18,5 +18,5 @@
   color: var(--color-text);
 }
 .button--disable {
- opacity: 0.4rem;
+  opacity: 0.4;
 }

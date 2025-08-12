@@ -16,6 +16,7 @@
 
 @media (min-width: 70rem) {
   .project_section {
+    align-items: start;
     padding: 4rem 10dvw;
   }
   .project--long {

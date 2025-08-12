@@ -3,10 +3,15 @@ import type { Theme } from "../interfaces/Theme.type";
 import { UIContext } from "./ui.context";
 import { ThemeOptions } from "../interfaces/Theme.enum";
 import { setTheme } from "./provider.context.utils";
+import { LanguageOptions } from "../interfaces/LanguageOptions.enum";
+import { type SupportedLanguage } from "../interfaces/SupportedLanguage.type";
 
 export const UIProvider = ({ children }: { children: ReactNode }) => {
   const [currentTheme, setCurrentTheme] = useState<Theme>(ThemeOptions.LIGTH);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [preferredLanguage, setPreferredLanguage] = useState<SupportedLanguage>(
+    LanguageOptions.ES,
+  );
 
   useEffect(() => {
     setTheme(currentTheme === ThemeOptions.DARK, document.documentElement);
@@ -22,6 +27,11 @@ export const UIProvider = ({ children }: { children: ReactNode }) => {
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
+  const toggleLanguage = () =>
+    setPreferredLanguage((prev) =>
+      prev === LanguageOptions.ES ? LanguageOptions.EN : LanguageOptions.ES,
+    );
+
   return (
     <UIContext.Provider
       value={{
@@ -30,6 +40,8 @@ export const UIProvider = ({ children }: { children: ReactNode }) => {
         mobileMenuOpen,
         toggleMobileMenu,
         closeMobileMenu,
+        preferredLanguage,
+        toggleLanguage,
       }}
     >
       {children}

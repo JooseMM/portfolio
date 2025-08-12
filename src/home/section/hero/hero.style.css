@@ -51,6 +51,7 @@
 @media (min-width: 65rem) {
   .hero {
     flex-direction: row;
+    padding-block: 0;
   }
 
   .hero__image {

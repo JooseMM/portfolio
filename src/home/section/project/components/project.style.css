@@ -57,12 +57,13 @@
 .project--vertical {
   width: fit-content;
   flex-direction: column;
+  align-items: center;
 }
 
 .project--vertical .project__description {
   text-align: center;
   padding-right: 0rem;
-  width: auto;
+  width: 100%;
 }
 
 .project > * {
@@ -73,7 +74,17 @@
   .project__mobile {
     width: clamp(4.5rem, 7vw, 6.5rem);
   }
+
   .project__description h3 {
     font-size: clamp(1.2rem, 1rem + 0.5vw, 1.8rem);
+  }
+
+  .project--vertical .project__image {
+    flex: 1;
+  }
+
+  .project--vertical .project__desktop {
+    width: clamp(15rem, 20vw, 25rem);
+    max-width: none;
   }
 }

@@ -6,3 +6,7 @@
   padding: 0.5rem 1.5rem;
   border-radius: 0.2rem;
 }
+
+.title--padding {
+  transform: translateX(4rem);
+}

@@ -3,7 +3,6 @@ import "./button.style.css";
 import type React from "react";
 import { ThemeCSSColor } from "../utils/interfaces/ThemeCSSColor.enum";
 import { useUI } from "../utils/context/hook.context";
-import { useState } from "react";
 import { ThemeOptions } from "../utils/interfaces/Theme.enum";
 
 interface Props {
@@ -22,28 +21,24 @@ export const Button = ({
 }: Props) => {
   const { currentTheme } = useUI();
 
-  return href ? (
+  return to ? (
+    <NavLink
+      to={to!}
+      style={style}
+      className={`button ${isSecundary ? "button--secundary" : ""}`}
+    >
+      {children}
+    </NavLink>
+  ) : (
     <a
       href={href}
       style={{
-        border: `1px ${
-          currentTheme === ThemeOptions.DARK && isSecundary
-            ? ThemeCSSColor.SENARY
-            : ThemeCSSColor.TERTIARY
-        } solid`,
+        border: isSecundary ? `1px ${ThemeCSSColor.TERTIARY} solid` : "none",
         ...style,
       }}
       className={`button ${isSecundary ? "button--secundary" : ""} ${!href && !to ? "button--disable" : ""}`}
     >
       {children}
     </a>
-  ) : (
-    <NavLink
-      to={to!}
-      style={style}
-      className={`button ${isSecundary ? "button--secundary" : ""} ${!href && !to ? "button--disable" : ""}`}
-    >
-      {children}
-    </NavLink>
   );
 };

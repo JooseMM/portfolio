@@ -1,8 +1,7 @@
 import { Button } from "../../../../shared/button/button.component";
 import { SkillBar } from "../../../../shared/skills/skillBar.component";
 import { useUI } from "../../../../shared/utils/context/hook.context";
-import { useDeviceType } from "../../../../shared/utils/customHooks/useCurrentDeviceType.hook";
-import { DeviceTypeOptions } from "../../../../shared/utils/interfaces/DeviceTypeOptions.enum";
+import { LanguageOptions } from "../../../../shared/utils/interfaces/LanguageOptions.enum";
 import type { Skill } from "../../../../shared/utils/interfaces/Skills.type";
 import { ThemeOptions } from "../../../../shared/utils/interfaces/Theme.enum";
 import { ThemeCSSColor } from "../../../../shared/utils/interfaces/ThemeCSSColor.enum";
@@ -10,7 +9,7 @@ import "./project.style.css";
 
 export interface Props {
   title: string;
-  description: string;
+  description: { [LanguageOptions.ES]: string; [LanguageOptions.EN]: string };
   desktopImage: string;
   mobileImage: string;
   skillList: Skill[];
@@ -31,8 +30,7 @@ export const Project = ({
   skillList,
   isVertical = false,
 }: Props) => {
-  const { currentTheme } = useUI();
-  const currentDevice = useDeviceType();
+  const { currentTheme, preferredLanguage } = useUI();
   const [appName, ...appType] = title.split(" ");
 
   return (
@@ -56,7 +54,7 @@ export const Project = ({
         <h3>
           {appName} <b>{appType.join(" ")}</b>
         </h3>
-        <p>{description}</p>
+        <p>{description[preferredLanguage]}</p>
         {isVertical ? (
           <SkillBar
             skillList={skillList}
@@ -74,7 +72,7 @@ export const Project = ({
               padding: "1rem 0rem 1rem 0rem",
             }}
           >
-            Visitar
+            {preferredLanguage === LanguageOptions.ES ? "Visitar" : "Visit"}
           </Button>
           <Button
             href={codeLink}
@@ -86,7 +84,7 @@ export const Project = ({
               padding: "1rem 0rem 1rem 0rem",
             }}
           >
-            Codigo
+            {preferredLanguage === LanguageOptions.ES ? "Codigo" : "Code"}
           </Button>
         </div>
       </div>
