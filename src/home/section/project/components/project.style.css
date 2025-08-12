@@ -87,4 +87,7 @@
     width: clamp(15rem, 20vw, 25rem);
     max-width: none;
   }
+  .project--vertical .project__mobile {
+    width: clamp(4rem, 8vw + 1rem, 8rem);
+  }
 }

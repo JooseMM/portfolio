@@ -1,0 +1,52 @@
+.about {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background-primary);
+  color: var(--color-text);
+  padding: 1rem 1rem 4rem 1rem;
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 35rem;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.about__description .about__paragraph {
+  display: flex;
+  background-color: var(--color-background-secundary);
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+  border-radius: 0.3rem;
+}
+
+.about__title {
+  background-color: var(--color-background-secundary);
+}
+
+.about__paragraph b {
+  color: var(--color-text);
+}
+
+@media (min-width: 70rem) {
+  .about {
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0 10dvw;
+  }
+  .about__description {
+    align-items: start;
+    max-width: 40rem;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
