@@ -4,7 +4,7 @@ import { useUI } from "../../../../shared/utils/context/hook.context";
 import { LanguageOptions } from "../../../../shared/utils/interfaces/LanguageOptions.enum";
 import type { Skill } from "../../../../shared/utils/interfaces/Skills.type";
 import { ThemeOptions } from "../../../../shared/utils/interfaces/Theme.enum";
-import { ThemeCSSColor } from "../../../../shared/utils/interfaces/ThemeCSSColor.enum";
+import { ThemeCSSColorOptions } from "../../../../shared/utils/interfaces/ThemeCSSColorOptions.enum";
 import "./project.style.css";
 
 export interface Props {
@@ -42,8 +42,8 @@ export const Project = ({
         style={{
           backgroundColor:
             currentTheme === ThemeOptions.DARK
-              ? ThemeCSSColor.SECUNDARY
-              : ThemeCSSColor.TERTIARY,
+              ? ThemeCSSColorOptions.SECUNDARY
+              : ThemeCSSColorOptions.TERTIARY,
         }}
       >
         <img className="project__mobile" src={mobileImage} />

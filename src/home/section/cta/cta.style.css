@@ -1,0 +1,28 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: clamp(1.2rem, 2vw + 1rem, 2.5rem);
+  font-weight: 700;
+}
+
+.cta__button {
+  background-color: #fff;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 70rem) {
+  .cta {
+    padding: 3rem 0;
+  }
+}

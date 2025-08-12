@@ -1,6 +1,5 @@
 import { useUI } from "../../utils/context/hook.context";
 import { ThemeOptions } from "../../utils/interfaces/Theme.enum";
-import { ThemeCSSColor } from "../../utils/interfaces/ThemeCSSColor.enum";
 import { getSkillColor } from "../skillBar.utils";
 
 export const AngularIcon = () => {

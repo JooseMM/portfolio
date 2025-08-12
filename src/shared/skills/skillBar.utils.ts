@@ -2,7 +2,7 @@ import { SkillOptions } from "../utils/interfaces/SkillOptions.enum";
 import type { Skill } from "../utils/interfaces/Skills.type";
 import { ThemeOptions } from "../utils/interfaces/Theme.enum";
 import type { Theme } from "../utils/interfaces/Theme.type";
-import { ThemeCSSColor } from "../utils/interfaces/ThemeCSSColor.enum";
+import { ThemeCSSColorOptions } from "../utils/interfaces/ThemeCSSColorOptions.enum";
 import { AndroidIcon } from "./components/android.icon";
 import { AngularIcon } from "./components/angular.icon";
 import { CSSIcon } from "./components/css.icon";
@@ -18,8 +18,8 @@ import { TypescriptIcon } from "./components/typescript.icon";
 
 export const getSkillColor = (theme: Theme) => {
   return theme === ThemeOptions.DARK
-    ? ThemeCSSColor.QUINARY
-    : ThemeCSSColor.NONARY;
+    ? ThemeCSSColorOptions.QUINARY
+    : ThemeCSSColorOptions.NONARY;
 };
 
 export const SKILL_LIST = {

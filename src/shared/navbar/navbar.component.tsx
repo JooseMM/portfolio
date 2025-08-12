@@ -55,7 +55,7 @@ export const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to="/contacto"
+                to="/contact"
                 className={({ isActive }) => (isActive ? "active" : "")}
               >
                 Contacto

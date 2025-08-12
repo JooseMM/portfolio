@@ -1,8 +1,8 @@
 import { TitleWrapper } from "../../../shared/titleWrapper/titleWrapper.component";
 import { useUI } from "../../../shared/utils/context/hook.context";
 import { ThemeOptions } from "../../../shared/utils/interfaces/Theme.enum";
-import AboutDark from "./images/about-image-dark.png";
-import AboutLight from "./images/about-image-light.png";
+import AboutDark from "../../../assets/about-image-dark.png";
+import AboutLight from "../../../assets/about-image-light.png";
 import "./about.style.css";
 
 export const AboutSection = () => {

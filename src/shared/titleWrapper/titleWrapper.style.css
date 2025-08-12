@@ -7,6 +7,8 @@
   border-radius: 0.2rem;
 }
 
-.title--padding {
-  transform: translateX(4rem);
+@media (min-width: 70rem) {
+  .title--padding {
+    transform: translateX(4rem);
+  }
 }

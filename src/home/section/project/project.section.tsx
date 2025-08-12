@@ -1,7 +1,7 @@
 import "./project.style.css";
 import { TitleWrapper } from "../../../shared/titleWrapper/titleWrapper.component";
 import { useUI } from "../../../shared/utils/context/hook.context";
-import { ThemeCSSColor } from "../../../shared/utils/interfaces/ThemeCSSColor.enum";
+import { ThemeCSSColorOptions } from "../../../shared/utils/interfaces/ThemeCSSColorOptions.enum";
 import { ThemeOptions } from "../../../shared/utils/interfaces/Theme.enum";
 import { Project } from "./components/project.component";
 import { PROJECT_LIST } from "./project.utils";
@@ -18,8 +18,8 @@ export const ProjectSection = () => {
         style={{
           backgroundColor:
             currentTheme === ThemeOptions.DARK
-              ? ThemeCSSColor.SECUNDARY
-              : ThemeCSSColor.QUINARY,
+              ? ThemeCSSColorOptions.SECUNDARY
+              : ThemeCSSColorOptions.QUINARY,
         }}
         className="title--padding"
       >

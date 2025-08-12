@@ -1,22 +1,22 @@
-import { ThemeCSSColor } from "../interfaces/ThemeCSSColor.enum";
+import { ThemeCSSColorOptions } from "../interfaces/ThemeCSSColorOptions.enum";
 import { ThemeCSSVariable } from "../interfaces/ThemeCSSVariables.enum";
 
 export const setTheme = (isDakTheme: boolean, root: HTMLElement) => {
   root.style.setProperty(
     ThemeCSSVariable.BACKGROUND_PRIMARY,
-    isDakTheme ? ThemeCSSColor.SECUNDARY : ThemeCSSColor.QUINARY,
+    isDakTheme ? ThemeCSSColorOptions.SECUNDARY : ThemeCSSColorOptions.QUINARY,
   );
   root.style.setProperty(
     ThemeCSSVariable.BACKGROUND_SECUNDARY,
-    isDakTheme ? ThemeCSSColor.PRIMARY : ThemeCSSColor.SENARY,
+    isDakTheme ? ThemeCSSColorOptions.PRIMARY : ThemeCSSColorOptions.SENARY,
   );
   root.style.setProperty(
     ThemeCSSVariable.CONTRAST_ACCENT,
-    isDakTheme ? ThemeCSSColor.QUATERNARY : ThemeCSSColor.PRIMARY,
+    isDakTheme ? ThemeCSSColorOptions.QUATERNARY : ThemeCSSColorOptions.PRIMARY,
   );
   root.style.setProperty(
     ThemeCSSVariable.TEXT,
-    isDakTheme ? ThemeCSSColor.OCTONARY : ThemeCSSColor.SEPTENARY,
+    isDakTheme ? ThemeCSSColorOptions.OCTONARY : ThemeCSSColorOptions.SEPTENARY,
   );
   root.style.setProperty(
     ThemeCSSVariable.SKILL_BACKGROUND,

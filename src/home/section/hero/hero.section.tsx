@@ -13,10 +13,10 @@ export const HeroSection = () => {
       </div>
       <div className="hero__description">
         <h1>
-          Soy <b>Jose</b>, Frontend Dev.
+          Soy <b>Jose</b>, Fullstack Dev.
         </h1>
         <p>
-          Hola! mi nombre es Jose Moreno, desarrollador web autodidacta, con
+          Hola! mi nombre es Jose Moreno, un desarrollador web autodidacta, con
           bases fuertes en diseño de UI UX.
         </p>
         <div>

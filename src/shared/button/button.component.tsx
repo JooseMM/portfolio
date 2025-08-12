@@ -1,15 +1,14 @@
 import { NavLink } from "react-router";
 import "./button.style.css";
 import type React from "react";
-import { ThemeCSSColor } from "../utils/interfaces/ThemeCSSColor.enum";
-import { useUI } from "../utils/context/hook.context";
-import { ThemeOptions } from "../utils/interfaces/Theme.enum";
+import { ThemeCSSColorOptions } from "../utils/interfaces/ThemeCSSColorOptions.enum";
 
 interface Props {
   children: React.ReactNode;
   to?: string;
   href?: string;
   isSecundary?: boolean;
+  className?: string;
   style?: React.CSSProperties;
 }
 export const Button = ({
@@ -17,15 +16,14 @@ export const Button = ({
   href,
   style,
   to,
+  className,
   isSecundary = false,
 }: Props) => {
-  const { currentTheme } = useUI();
-
   return to ? (
     <NavLink
       to={to!}
       style={style}
-      className={`button ${isSecundary ? "button--secundary" : ""}`}
+      className={`button ${isSecundary ? "button--secundary" : ""} ${className}`}
     >
       {children}
     </NavLink>
@@ -33,10 +31,11 @@ export const Button = ({
     <a
       href={href}
       style={{
-        border: isSecundary ? `1px ${ThemeCSSColor.TERTIARY} solid` : "none",
+        border: isSecundary ? `1px ${ThemeCSSColorOptions.TERTIARY} solid` : "none",
         ...style,
       }}
-      className={`button ${isSecundary ? "button--secundary" : ""} ${!href && !to ? "button--disable" : ""}`}
+      target="_blank"
+      className={`button ${isSecundary ? "button--secundary" : ""} ${!href && !to ? "button--disable" : ""} ${className}`}
     >
       {children}
     </a>
