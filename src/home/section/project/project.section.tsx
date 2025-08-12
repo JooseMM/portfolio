@@ -5,9 +5,13 @@ import { ThemeCSSColor } from "../../../shared/utils/interfaces/ThemeCSSColor.en
 import { ThemeOptions } from "../../../shared/utils/interfaces/Theme.enum";
 import { Project } from "./components/project.component";
 import { PROJECT_LIST } from "./project.utils";
+import { useDeviceType } from "../../../shared/utils/customHooks/useCurrentDeviceType.hook";
+import { DeviceTypeOptions } from "../../../shared/utils/interfaces/DeviceTypeOptions.enum";
 
 export const ProjectSection = () => {
   const { currentTheme } = useUI();
+  const currentDevice = useDeviceType();
+
   return (
     <section className="project_section">
       <TitleWrapper
@@ -16,7 +20,6 @@ export const ProjectSection = () => {
             currentTheme === ThemeOptions.DARK
               ? ThemeCSSColor.SECUNDARY
               : ThemeCSSColor.QUINARY,
-          transform: "translateX(3rem)",
         }}
       >
         <h2>Proyectos</h2>
@@ -26,8 +29,16 @@ export const ProjectSection = () => {
           <Project
             {...project}
             key={index}
-            className={`${isVertical ? "project_section__long" : ""}`}
-            isVertical={isVertical}
+            className={`${currentDevice === DeviceTypeOptions.MOBILE ? "project--long" : currentDevice === DeviceTypeOptions.TABLET ? "" : isVertical ? "project--long" : ""}`}
+            isVertical={
+              currentDevice === DeviceTypeOptions.MOBILE
+                ? true
+                : currentDevice === DeviceTypeOptions.TABLET
+                  ? false
+                  : isVertical
+                    ? true
+                    : false
+            }
           />
         ))}
       </div>

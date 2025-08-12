@@ -1,6 +1,8 @@
 import { Button } from "../../../../shared/button/button.component";
 import { SkillBar } from "../../../../shared/skills/skillBar.component";
 import { useUI } from "../../../../shared/utils/context/hook.context";
+import { useDeviceType } from "../../../../shared/utils/customHooks/useCurrentDeviceType.hook";
+import { DeviceTypeOptions } from "../../../../shared/utils/interfaces/DeviceTypeOptions.enum";
 import type { Skill } from "../../../../shared/utils/interfaces/Skills.type";
 import { ThemeOptions } from "../../../../shared/utils/interfaces/Theme.enum";
 import { ThemeCSSColor } from "../../../../shared/utils/interfaces/ThemeCSSColor.enum";
@@ -30,6 +32,7 @@ export const Project = ({
   isVertical = false,
 }: Props) => {
   const { currentTheme } = useUI();
+  const currentDevice = useDeviceType();
   const [appName, ...appType] = title.split(" ");
 
   return (
@@ -55,7 +58,11 @@ export const Project = ({
         </h3>
         <p>{description}</p>
         {isVertical ? (
-          <SkillBar skillList={skillList} isVertical={false} style={{ marginTop: "0.5rem" }}/>
+          <SkillBar
+            skillList={skillList}
+            isVertical={false}
+            style={{ marginTop: "0.5rem" }}
+          />
         ) : null}
         <div className="project__action">
           <Button

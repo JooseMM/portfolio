@@ -2,19 +2,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
-  padding: 4rem 10dvw;
+  align-items: center;
+  padding: 4rem 5dvw;
   background-color: var(--color-background-secundary);
   gap: 1.5rem;
 }
 
 .project_section__list {
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.project_section__long {
-  grid-row: span 2;
-  height: auto;
+@media (min-width: 70rem) {
+  .project_section {
+    padding: 4rem 10dvw;
+  }
+  .project--long {
+    grid-row: span 2;
+    height: auto;
+  }
+  .project_section__list {
+    grid-template-columns: 1fr 0.5fr;
+  }
 }

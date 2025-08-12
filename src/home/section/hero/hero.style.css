@@ -5,7 +5,7 @@
   justify-content: center;
   background-color: var(--color-background-primary);
   color: var(--color-text);
-  padding-inline: 10dvw;
+  padding: 4rem 10dvw;
 }
 
 .hero__description {

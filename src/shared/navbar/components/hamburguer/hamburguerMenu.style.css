@@ -6,7 +6,7 @@
   animation: 200ms resize ease-in;
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 70rem) {
   .hamburguer {
     display: none;
   }

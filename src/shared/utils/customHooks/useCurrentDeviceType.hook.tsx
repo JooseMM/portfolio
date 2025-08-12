@@ -3,9 +3,11 @@ import { type DeviceType } from "../interfaces/DeviceType.type";
 import { DeviceTypeOptions } from "../interfaces/DeviceTypeOptions.enum";
 
 const checkCurrentDevice = () =>
-  window.innerWidth >= 1000
+  window.innerWidth >= 1120
     ? DeviceTypeOptions.DESKTOP
-    : DeviceTypeOptions.MOBILE;
+    : window.innerWidth >= 800
+      ? DeviceTypeOptions.TABLET
+      : DeviceTypeOptions.MOBILE;
 
 export function useDeviceType() {
   const [deviceType, setDeviceTypsetDeviceType] =

@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: 65rem) {
+@media (min-width: 70rem) {
   .switcher:hover {
     outline: 1px solid var(--color-secundary);
   }

@@ -82,7 +82,7 @@
   }
 }
 
-@media (min-width: 65rem) {
+@media (min-width: 70rem) {
   .navbar__links {
     display: flex;
     background-color: inherit;

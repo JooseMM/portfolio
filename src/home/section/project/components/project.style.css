@@ -16,12 +16,12 @@
 }
 
 .project__description h3 {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem);
   font-weight: 700;
 }
 
 .project__description p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1rem + 1vw, 1.1rem);
   margin-top: 0.5rem;
   max-width: 35ch;
   line-height: 1.4rem;
@@ -39,7 +39,7 @@
 }
 
 .project__mobile {
-  width: 6.5rem;
+  width: clamp(4.5rem, 10vw + 3rem, 6.5rem);
   position: absolute;
   right: 1rem;
 }
@@ -67,4 +67,13 @@
 
 .project > * {
   width: fit-content;
+}
+
+@media (min-width: 70rem) {
+  .project__mobile {
+    width: clamp(4.5rem, 7vw, 6.5rem);
+  }
+  .project__description h3 {
+    font-size: clamp(1.2rem, 1rem + 0.5vw, 1.8rem);
+  }
 }
