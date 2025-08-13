@@ -12,7 +12,13 @@ export const AboutSection = () => {
       <img src={currentTheme === ThemeOptions.DARK ? AboutDark : AboutLight} />
       <div className="about__description">
         <TitleWrapper className="about__title">Sobre Mi</TitleWrapper>
-        <div className="about__paragraph">
+        <div
+          className="about__paragraph"
+          style={{
+            border:
+              currentTheme === ThemeOptions.DARK ? "" : "0.1rem solid #97bfbf",
+          }}
+        >
           <p>
             Me considero <b>apasionado por la tecnología</b> en general, los
             conceptos complejos y la resolución de problemas. Desde muy pequeño

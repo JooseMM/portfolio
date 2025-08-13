@@ -16,7 +16,7 @@
 
 @media (min-width: 70rem) {
   .project_section {
-    align-items: start;
+    align-items: center;
     padding: 4rem 10dvw;
   }
   .project--long {
@@ -25,5 +25,6 @@
   }
   .project_section__list {
     grid-template-columns: 1fr 0.5fr;
+    margin-inline: auto;
   }
 }

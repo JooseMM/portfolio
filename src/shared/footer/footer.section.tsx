@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer
       className="footer"
       style={{
-        backgroundColor: ThemeCSSColorOptions.SECUNDARY,
+        backgroundColor: ThemeCSSColorOptions.SEPTENARY,
         color: ThemeCSSColorOptions.OCTONARY,
       }}
     >

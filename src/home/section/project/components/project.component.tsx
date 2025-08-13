@@ -35,6 +35,9 @@ export const Project = ({
 
   return (
     <div
+      style={{
+        border: `0.1rem solid ${currentTheme === ThemeOptions.DARK ? "#457E7E" : "#97bfbf"}`,
+      }}
       className={`project ${isVertical ? "project--vertical" : ""} ${className}`}
     >
       <div

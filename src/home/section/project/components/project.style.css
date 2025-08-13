@@ -2,10 +2,11 @@
   display: flex;
   background-color: var(--color-background-primary);
   gap: 1rem;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   padding: 1rem;
   overflow: hidden;
   color: var(--color-text);
+  max-width: 25rem;
 }
 
 .project__description {
@@ -39,13 +40,13 @@
 }
 
 .project__mobile {
-  width: clamp(4.5rem, 10vw + 3rem, 6.5rem);
+  width: clamp(3.5rem, 10vw + 2rem, 5rem);
   position: absolute;
   right: 1rem;
 }
 
 .project__desktop {
-  width: 20rem;
+  width: clamp(15rem, 10vw + 3rem, 20rem);
 }
 
 .project__action {
@@ -62,12 +63,30 @@
 
 .project--vertical .project__description {
   text-align: center;
+  justify-content: center;
   padding-right: 0rem;
   width: 100%;
 }
 
+.project--vertical .project__image {
+  width: 100%;
+}
+
+.project--vertical .project__description p {
+  max-width: none;
+}
+
 .project > * {
   width: fit-content;
+}
+@media (min-width: 50rem) {
+  .project {
+    max-width: none;
+  }
+
+  .project--vertical .project__image {
+    flex: 1;
+  }
 }
 
 @media (min-width: 70rem) {
@@ -79,15 +98,18 @@
     font-size: clamp(1.2rem, 1rem + 0.5vw, 1.8rem);
   }
 
-  .project--vertical .project__image {
-    flex: 1;
+  .project__mobile {
+    width: clamp(2.5rem, 5vw + 1rem, 5.8rem);
   }
 
+  .project__desktop {
+    width: 15dvw;
+  }
   .project--vertical .project__desktop {
-    width: clamp(15rem, 20vw, 25rem);
+    width: clamp(10rem, 20vw, 18rem);
     max-width: none;
   }
   .project--vertical .project__mobile {
-    width: clamp(4rem, 8vw + 1rem, 8rem);
+    width: clamp(2.5rem, 5vw + 2rem, 6rem);
   }
 }

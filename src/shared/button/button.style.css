@@ -1,9 +1,10 @@
 .button {
   background-color: var(--color-accent);
   color: #fff;
+  letter-spacing: 1px;
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 0.3rem;
   cursor: pointer;
   transition: 300ms ease-in;

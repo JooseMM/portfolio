@@ -1,14 +1,8 @@
 .title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   width: fit-content;
   font-weight: 700;
   color: var(--color-text);
   padding: 0.6rem 2rem;
   border-radius: 0.2rem;
-}
-
-@media (min-width: 70rem) {
-  .title--padding {
-    transform: translateX(4rem);
-  }
 }

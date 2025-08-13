@@ -21,7 +21,6 @@ export const ProjectSection = () => {
               ? ThemeCSSColorOptions.SECUNDARY
               : ThemeCSSColorOptions.QUINARY,
         }}
-        className="title--padding"
       >
         <h2>Proyectos</h2>
       </TitleWrapper>
