@@ -23,6 +23,7 @@
     grid-row: span 2;
     height: auto;
   }
+
   .project_section__list {
     grid-template-columns: 1fr 0.5fr;
     margin-inline: auto;

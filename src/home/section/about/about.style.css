@@ -31,9 +31,13 @@
 .about__title {
   background-color: var(--color-background-primary);
 }
+.about__paragraph p {
+  opacity: 0.9;
+}
 
 .about__paragraph b {
   color: var(--color-text);
+  opacity: 1;
 }
 
 @media (min-width: 70rem) {
@@ -49,6 +53,6 @@
     text-align: left;
   }
   .about__description .about__paragraph {
-    padding: 1.5rem; 
+    padding: 1.5rem;
   }
 }

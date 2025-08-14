@@ -1,5 +1,6 @@
 import { LanguageOptions } from "../../../shared/utils/interfaces/LanguageOptions.enum";
 import Intelsoft from "./images/intelsoft.png";
+import Freelance from "./images/freelance.svg"
 
 export interface ExperienceProps {
   isSecundary: boolean;
@@ -33,7 +34,7 @@ export const EXPERIENCE_LIST: Experience = {
       company: "Freelance",
       description:
         "Desarrollo de aplicaciones web con Angular y móviles nativas en Android con Kotlin. Backend con NestJS, Node.js y TypeScript en microservicios, autenticación JWT y pasarelas de pago. Experiencia con TypeORM, MongoDB, Git y pruebas automatizadas.",
-      image: Intelsoft,
+      image: Freelance,
       year: 2025,
     },
   ],
@@ -52,7 +53,7 @@ export const EXPERIENCE_LIST: Experience = {
       description:
         "Development of web applications with Angular and native mobile apps on Android using Kotlin. Backend with NestJS, Node.js, and TypeScript in microservices, JWT authentication, and payment gateways. Experience with TypeORM, MongoDB, Git, and automated testing.",
       year: 2025,
-      image: Intelsoft,
+      image: Freelance,
     },
   ],
 };

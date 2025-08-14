@@ -14,6 +14,18 @@ export const UIProvider = ({ children }: { children: ReactNode }) => {
   );
 
   useEffect(() => {
+    /* Language detection */
+    const userLang = navigator.languages?.[0] || navigator.language;
+    setPreferredLanguage(
+      userLang.includes("es") ? LanguageOptions.ES : LanguageOptions.EN,
+    );
+
+    /* Theme detection */
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    setCurrentTheme(mq.matches ? ThemeOptions.DARK : ThemeOptions.LIGTH);
+  }, []);
+
+  useEffect(() => {
     setTheme(currentTheme === ThemeOptions.DARK, document.documentElement);
   }, [currentTheme]);
 

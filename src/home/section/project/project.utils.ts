@@ -41,9 +41,9 @@ export const PROJECT_LIST: ProjectInfo[] = [
     title: "Criszul Lading Page",
     description: {
       [LanguageOptions.ES]:
-        "Diseño elegante para una empresa de envíos, con una interfaz moderna glassy-bento que ofrece una experiencia atractiva y fácil de usar, junto con un formulario de contacto completamente funcional para facilitar la comunicación.",
+        "Diseño elegante para empresa de envíos con interfaz glassy-bento moderna y formulario de contacto funcional para una experiencia atractiva y fácil de usar.",
       [LanguageOptions.EN]:
-        "Elegant design for a shipping company, featuring a modern glassy-bento UI that offers a sleek and user-friendly experience, along with a fully functional contact form to facilitate easy communication.",
+        "Elegant shipping company design with a modern glassy-bento interface and a functional contact form for an attractive, user-friendly experience.",
     },
     isVertical: true,
     websiteLink: "https://criszul.netlify.app/",

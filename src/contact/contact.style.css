@@ -36,11 +36,12 @@
 }
 
 .contact a {
+  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   color: #fff;
+  padding: 1rem;
 }
 
 .contact__icon {
@@ -54,8 +55,9 @@
   display: flex;
   font-weight: 700;
   font-size: clamp(1rem, 1vw + 1rem, 1.3rem);
-  padding: 1rem;
   border-radius: 0.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
   transition: 150ms ease-in;
 }
 

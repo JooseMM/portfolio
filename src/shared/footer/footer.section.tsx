@@ -18,7 +18,7 @@ export const Footer = () => {
     >
       <ul>
         <li className="footer__title">
-          <NavLink to="/#hero">Jose Moreno</NavLink>
+          <NavLink to="/#navbar">Jose Moreno</NavLink>
         </li>
         <li>© Copyright 2024</li>
       </ul>

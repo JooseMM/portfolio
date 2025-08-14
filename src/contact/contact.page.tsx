@@ -13,7 +13,7 @@ import { useScrollToHash } from "../shared/utils/customHooks/useScrollTo.hook";
 export const ContactPage = () => {
   const { currentTheme, preferredLanguage } = useUI();
   const deviceType = useDeviceType();
-  useScrollToHash({ block: "end" });
+  useScrollToHash({ block: "center" });
 
   return (
     <section className="contact" id="contact">
@@ -50,7 +50,7 @@ export const ContactPage = () => {
             className="contact__box"
             style={{ backgroundColor: ThemeCSSColorOptions.PRIMARY }}
           >
-            <a href={link}>
+            <a href={link} target="_blank">
               <div className="contact__icon">
                 <Icon
                   fillColor={ThemeCSSColorOptions.PRIMARY}

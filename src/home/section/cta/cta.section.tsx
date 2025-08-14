@@ -17,8 +17,12 @@ export const CTASection = () => {
             : ThemeCSSColorOptions.PRIMARY,
       }}
     >
-      <h2>¿Te interesa trabajar conmigo?</h2>
-      <Button to="/contact" className="cta__button">
+      {preferredLanguage === LanguageOptions.ES ? (
+        <h2>¿Te interesa trabajar conmigo?</h2>
+      ) : (
+        <h2>Are you interested in working with me?</h2>
+      )}
+      <Button to="/contact#contact" className="cta__button">
         {preferredLanguage === LanguageOptions.ES
           ? "¡Contactame!"
           : "Contact me!"}

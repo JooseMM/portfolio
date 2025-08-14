@@ -14,7 +14,7 @@ export interface ContactInfo {
 export const CONTACT_LIST: ContactInfo[] = [
   {
     name: "Whatsapp",
-    link: "https://wa.me/56932845558?text=Hola%21%20Vengo%20de%20tu%20web,%20me%20gustaria%20saber%20mas%20sobre%20ti.",
+    link: "https://wa.me/56932845558?text=Hola%21%20Vengo%20de%20tu%20portafolio,%20me%20gustaria%20saber%20mas%20sobre%20ti.",
     visible: "(+56) 9 3284 5558",
     Icon: WhatsappIcon,
   },

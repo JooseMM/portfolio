@@ -13,7 +13,8 @@ import { LINKS_OPTIONS } from "../utils/constants.utils";
 type AnimationState = "opening" | "closing" | "idle";
 
 export const Navbar = () => {
-  const { currentTheme, mobileMenuOpen, preferredLanguage } = useUI();
+  const { currentTheme, mobileMenuOpen, preferredLanguage, closeMobileMenu } =
+    useUI();
   const [animationState, setAnimationState] = useState<AnimationState>("idle");
   const [shouldOpen, setShouldOpen] = useState(false);
   const currentDeviceType = useDeviceType();
@@ -46,6 +47,7 @@ export const Navbar = () => {
               <NavLink
                 key={info.link}
                 to={info.link}
+                onClick={closeMobileMenu}
                 className={({ isActive }) =>
                   isActive &&
                   (index === 0 || index === LINKS_OPTIONS.length - 1)
