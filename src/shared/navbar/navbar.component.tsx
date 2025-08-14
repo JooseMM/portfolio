@@ -3,15 +3,17 @@ import { NavLink } from "react-router";
 import { useUI } from "../utils/context/hook.context";
 import { ThemeOptions } from "../utils/interfaces/Theme.enum";
 import { HamburguerMenu } from "./components/hamburguer/hamburguerMenu.component";
-import { ThemeSwitcher } from "./components/switcher/themeSwitcher.component";
+import { ThemeSwitcher } from "./components/themeSwitcher/themeSwitcher.component";
 import { useEffect, useState } from "react";
 import { useDeviceType } from "../utils/customHooks/useCurrentDeviceType.hook";
 import { DeviceTypeOptions } from "../utils/interfaces/DeviceTypeOptions.enum";
+import { LanguageSwitcher } from "./components/languageSwitcher/languageSwitcher.component";
+import { LINKS_OPTIONS } from "../utils/constants.utils";
 
 type AnimationState = "opening" | "closing" | "idle";
 
 export const Navbar = () => {
-  const { currentTheme, mobileMenuOpen } = useUI();
+  const { currentTheme, mobileMenuOpen, preferredLanguage } = useUI();
   const [animationState, setAnimationState] = useState<AnimationState>("idle");
   const [shouldOpen, setShouldOpen] = useState(false);
   const currentDeviceType = useDeviceType();
@@ -31,38 +33,34 @@ export const Navbar = () => {
 
   return (
     <nav
+      id="navbar"
       className={`navbar ${currentTheme === ThemeOptions.DARK ? "navbar--dark" : ""}`}
     >
-      <a>Jose M</a>
+      <NavLink to="/">Jose M</NavLink>
       {shouldOpen || currentDeviceType === DeviceTypeOptions.DESKTOP ? (
         <div
           className={`navbar__links ${animationState === "opening" ? "navbar__links--opening" : animationState === "closing" ? "navbar__links--closing" : "idle"}`}
         >
           <ul>
-            <li>
+            {LINKS_OPTIONS.map((info, index) => (
               <NavLink
-                to="/"
-                className={({ isActive }) => (isActive ? "active" : "")}
+                key={info.link}
+                to={info.link}
+                className={({ isActive }) =>
+                  isActive &&
+                  (index === 0 || index === LINKS_OPTIONS.length - 1)
+                    ? "active"
+                    : ""
+                }
               >
-                Inicio
+                {info.visible[preferredLanguage]}
               </NavLink>
-            </li>
-            <li>
-              <a>Proyectos</a>
-            </li>
-            <li>
-              <a>Sobre mi</a>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) => (isActive ? "active" : "")}
-              >
-                Contacto
-              </NavLink>
-            </li>
+            ))}
           </ul>
-          <ThemeSwitcher />
+          <div className="navbar__switchers">
+            <ThemeSwitcher />
+            <LanguageSwitcher />
+          </div>
         </div>
       ) : null}
       <HamburguerMenu />

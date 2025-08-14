@@ -3,16 +3,18 @@ import { CTASection } from "./section/cta/cta.section";
 import { ExperienceSection } from "./section/experiece/experience.section";
 import { HeroSection } from "./section/hero/hero.section";
 import { ProjectSection } from "./section/project/project.section";
+import { useScrollToHash } from "../shared/utils/customHooks/useScrollTo.hook";
 
 export const HomePage = () => {
- // create a useEffect to handle scrolling here
+  useScrollToHash();
+
   return (
     <main className="home">
-      <HeroSection />
-      <ProjectSection />
-      <ExperienceSection />
-      <AboutSection />
-       <CTASection />
+      <HeroSection id="hero" />
+      <ProjectSection id="projects" />
+      <ExperienceSection id="experience" />
+      <AboutSection id="about" />
+      <CTASection />
     </main>
   );
 };

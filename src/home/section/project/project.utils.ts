@@ -29,7 +29,7 @@ export const PROJECT_LIST: ProjectInfo[] = [
       [LanguageOptions.ES]:
         "Creada para una nutricionista, con un diseño moderno y ordenado que transmite profesionalismo y cercanía.",
       [LanguageOptions.EN]:
-        "Creada para una nutricionista, con un diseño moderno y ordenado que transmite profesionalismo y cercanía.",
+        "Created for a nutritionist, with a modern and clean design that conveys professionalism and approachability.",
     },
     websiteLink: "https://nutripia.netlify.app/",
     codeLink: "",
@@ -41,9 +41,9 @@ export const PROJECT_LIST: ProjectInfo[] = [
     title: "Criszul Lading Page",
     description: {
       [LanguageOptions.ES]:
-        "Diseño elegante para empresa de envíos, con UI glassy-bento y formulario de contacto.",
+        "Diseño elegante para una empresa de envíos, con una interfaz moderna glassy-bento que ofrece una experiencia atractiva y fácil de usar, junto con un formulario de contacto completamente funcional para facilitar la comunicación.",
       [LanguageOptions.EN]:
-        "Diseño elegante para empresa de envíos, con UI glassy-bento y formulario de contacto.",
+        "Elegant design for a shipping company, featuring a modern glassy-bento UI that offers a sleek and user-friendly experience, along with a fully functional contact form to facilitate easy communication.",
     },
     isVertical: true,
     websiteLink: "https://criszul.netlify.app/",
@@ -56,9 +56,9 @@ export const PROJECT_LIST: ProjectInfo[] = [
     title: "Invoice App",
     description: {
       [LanguageOptions.ES]:
-        "Genera cuentas de cobro en formato PDF disponibles para descargar utilizando la libreria.",
+        "Genera cuentas de cobro en formato PDF disponibles para descargar, utilizando la librería React PDF para una creación de documentos eficiente y sin complicaciones.",
       [LanguageOptions.EN]:
-        "Genera cuentas de cobro en formato PDF disponibles para descargar utilizando la libreria.",
+        "Generates billing invoices in PDF format that are available for download, using the React PDF library for seamless and efficient document creation.",
     },
     isVertical: false,
     websiteLink: "some",

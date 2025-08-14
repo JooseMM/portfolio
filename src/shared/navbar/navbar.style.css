@@ -56,6 +56,13 @@
   opacity: 1;
 }
 
+.navbar__switchers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -93,6 +100,10 @@
     justify-content: space-between;
     flex: 0.9;
     border: none;
+  }
+
+  .navbar__switchers {
+    flex-direction: row;
   }
 
   .navbar__links ul {

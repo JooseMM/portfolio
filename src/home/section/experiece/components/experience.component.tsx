@@ -1,5 +1,3 @@
-import { useUI } from "../../../../shared/utils/context/hook.context";
-import { ThemeOptions } from "../../../../shared/utils/interfaces/Theme.enum";
 import { ThemeCSSColorOptions } from "../../../../shared/utils/interfaces/ThemeCSSColorOptions.enum";
 import type { ExperienceInfo } from "../experience.utils";
 import "./experience.style.css";
@@ -12,12 +10,10 @@ export const ExperienceBox = ({
   year,
   isSecundary = false,
 }: ExperienceInfo & { isSecundary?: boolean }) => {
-  const { currentTheme } = useUI();
-
   return (
     <li
       style={{
-        border: `0.1rem solid ${currentTheme === ThemeOptions.DARK ? "#457E7E" : "#97bfbf"}`,
+        border: `0.1rem solid #457E7E`,
       }}
       className={`experience__box ${isSecundary ? "experience__box--secundary" : ""}`}
     >
@@ -31,10 +27,7 @@ export const ExperienceBox = ({
       <div
         className="experience__box__image"
         style={{
-          backgroundColor:
-            currentTheme === ThemeOptions.DARK
-              ? ThemeCSSColorOptions.SECUNDARY
-              : ThemeCSSColorOptions.TERTIARY,
+          backgroundColor: ThemeCSSColorOptions.SECUNDARY,
         }}
       >
         <img src={image} />

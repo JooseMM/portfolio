@@ -79,6 +79,7 @@
 .project > * {
   width: fit-content;
 }
+
 @media (min-width: 50rem) {
   .project {
     max-width: none;
@@ -105,6 +106,11 @@
   .project__desktop {
     width: 15dvw;
   }
+
+  .project--vertical {
+    max-width: 25rem;
+  }
+
   .project--vertical .project__desktop {
     width: clamp(10rem, 20vw, 18rem);
     max-width: none;

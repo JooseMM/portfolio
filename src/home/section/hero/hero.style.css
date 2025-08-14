@@ -32,7 +32,7 @@
 
 .hero__description p {
   font-size: clamp(1rem, 4vw, 1.2rem);
-  max-width: 40ch;
+  max-width: 35ch;
   opacity: 0.7;
   margin-block: clamp(0.8rem, 2vw, 1rem);
 }

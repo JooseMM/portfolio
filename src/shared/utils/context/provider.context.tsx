@@ -27,11 +27,6 @@ export const UIProvider = ({ children }: { children: ReactNode }) => {
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
-  const toggleLanguage = () =>
-    setPreferredLanguage((prev) =>
-      prev === LanguageOptions.ES ? LanguageOptions.EN : LanguageOptions.ES,
-    );
-
   return (
     <UIContext.Provider
       value={{
@@ -41,7 +36,7 @@ export const UIProvider = ({ children }: { children: ReactNode }) => {
         toggleMobileMenu,
         closeMobileMenu,
         preferredLanguage,
-        toggleLanguage,
+        setPreferredLanguage,
       }}
     >
       {children}

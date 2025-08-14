@@ -5,20 +5,21 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 1rem 8rem 1rem;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .experience__list {
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
-  gap: 4.5rem;
+  gap: 2rem;
 }
 
 @media (min-width: 35rem) {
   .experience {
-    padding: 4rem 0rem 10rem 0rem;
+    padding: 4rem 0rem 8rem 0rem;
   }
   .experience__list {
     max-width: 80dvw;

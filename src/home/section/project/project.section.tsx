@@ -7,13 +7,15 @@ import { Project } from "./components/project.component";
 import { PROJECT_LIST } from "./project.utils";
 import { useDeviceType } from "../../../shared/utils/customHooks/useCurrentDeviceType.hook";
 import { DeviceTypeOptions } from "../../../shared/utils/interfaces/DeviceTypeOptions.enum";
+import { LanguageOptions } from "../../../shared/utils/interfaces/LanguageOptions.enum";
+import type { SectionId } from "../../../shared/utils/interfaces/SectionId.type";
 
-export const ProjectSection = () => {
-  const { currentTheme } = useUI();
+export const ProjectSection = ({ id }: SectionId) => {
+  const { currentTheme, preferredLanguage } = useUI();
   const currentDevice = useDeviceType();
 
   return (
-    <section className="project_section">
+    <section className="project_section" id={id}>
       <TitleWrapper
         style={{
           backgroundColor:
@@ -22,7 +24,9 @@ export const ProjectSection = () => {
               : ThemeCSSColorOptions.QUINARY,
         }}
       >
-        <h2>Proyectos</h2>
+        <h2>
+          {preferredLanguage === LanguageOptions.ES ? "Proyectos" : "Projects"}
+        </h2>
       </TitleWrapper>
       <div className="project_section__list">
         {PROJECT_LIST.map(({ isVertical, ...project }, index) => (

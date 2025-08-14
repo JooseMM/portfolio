@@ -9,7 +9,9 @@ interface UIContextProps {
   toggleMobileMenu: () => void;
   closeMobileMenu: () => void;
   preferredLanguage: SupportedLanguage;
-  toggleLanguage: () => void;
+  setPreferredLanguage: (
+    value: React.SetStateAction<SupportedLanguage>,
+  ) => void;
 }
 
 export const UIContext = createContext<UIContextProps | undefined>(undefined);

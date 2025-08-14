@@ -4,14 +4,15 @@
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  background-color: var(--color-background-secundary);
+  background-color: #006666;
   gap: 1.5rem;
   height: fit-content;
   width: fit-content;
   border-radius: 1rem;
   position: relative;
-  color: var(--color-text);
+  color: #fff;
 }
+/*
 
 .experience__box::before {
   content: "";
@@ -36,6 +37,7 @@
   height: 50px;
 }
 
+*/
 .experience__box__description {
   flex: 1;
 }
@@ -69,7 +71,7 @@
     height: 13.7rem;
     width: 43.7rem;
     border-radius: 5rem 50rem 50rem 5rem;
-    transform: translateX(-5rem);
+    transform: translateX(-10rem);
   }
 
   .experience__box__image {
@@ -84,7 +86,9 @@
 
   .experience__box--secundary {
     border-radius: 50rem 5rem 5rem 50rem;
-    transform: translateX(5rem);
+    transform: translateX(10rem);
+    background-color: var(--color-background-secundary);
+    color: var(--color-text);
   }
 
   .experience__box--secundary .experience__box__image {
