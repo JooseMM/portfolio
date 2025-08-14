@@ -23,7 +23,7 @@ export const PROJECT_LIST: ProjectInfo[] = [
   {
     desktopImage: NutripiaDesktop,
     mobileImage: NutripiaMobile,
-    title: "Nutripia Lading Page",
+    title: "Nutripia Landing Page",
     isVertical: false,
     description: {
       [LanguageOptions.ES]:
@@ -38,7 +38,7 @@ export const PROJECT_LIST: ProjectInfo[] = [
   {
     desktopImage: CriszulDesktop,
     mobileImage: CriszulMobile,
-    title: "Criszul Lading Page",
+    title: "Criszul Landing Page",
     description: {
       [LanguageOptions.ES]:
         "Diseño elegante para empresa de envíos con interfaz glassy-bento moderna y formulario de contacto funcional para una experiencia atractiva y fácil de usar.",
