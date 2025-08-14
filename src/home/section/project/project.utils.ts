@@ -61,8 +61,8 @@ export const PROJECT_LIST: ProjectInfo[] = [
         "Generates billing invoices in PDF format that are available for download, using the React PDF library for seamless and efficient document creation.",
     },
     isVertical: false,
-    websiteLink: "some",
-    codeLink: "sd",
+    websiteLink: "https://cuentas-pdf.netlify.app",
+    codeLink: "https://github.com/JooseMM/cuentas-PDF",
     skillList: [SkillOptions.FIGMA, SkillOptions.HTML, SkillOptions.CSS],
   },
 ];
