@@ -33,7 +33,7 @@ export const HeroSection = ({ id }: SectionId) => {
             : "Hello! My name is Jose Moreno, a self-taught web developer with strong foundations in UI/UX design."}
         </p>
         <div>
-          <Button to="/contacto">
+          <Button to="/contact/#navbar">
             {preferredLanguage === LanguageOptions.ES
               ? "Contratame"
               : "Hire me"}
