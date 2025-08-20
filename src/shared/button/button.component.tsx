@@ -1,16 +1,8 @@
-import { NavLink } from "react-router";
 import "./button.style.css";
-import type React from "react";
+import { NavLink } from "react-router";
 import { ThemeCSSColorOptions } from "../utils/interfaces/ThemeCSSColorOptions.enum";
+import type { AnchorEvent, ButtonProps } from "./button.utils";
 
-interface Props {
-  children: React.ReactNode;
-  to?: string;
-  href?: string;
-  isSecundary?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-}
 export const Button = ({
   children,
   href,
@@ -18,7 +10,11 @@ export const Button = ({
   to,
   className,
   isSecundary = false,
-}: Props) => {
+}: ButtonProps) => {
+  const preventReload = (event: AnchorEvent) => {
+    return href ? undefined : event.preventDefault();
+  };
+
   return to ? (
     <NavLink
       to={to!}
@@ -31,9 +27,12 @@ export const Button = ({
     <a
       href={href}
       style={{
-        border: isSecundary ? `1px ${ThemeCSSColorOptions.TERTIARY} solid` : "none",
+        border: isSecundary
+          ? `1px ${ThemeCSSColorOptions.TERTIARY} solid`
+          : "none",
         ...style,
       }}
+      onClick={preventReload}
       target="_blank"
       className={`button ${isSecundary ? "button--secundary" : ""} ${!href && !to ? "button--disable" : ""} ${className}`}
     >
