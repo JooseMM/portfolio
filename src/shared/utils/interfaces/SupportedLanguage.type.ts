@@ -1,4 +1,5 @@
-import type { LanguageOptions } from "./LanguageOptions.enum";
+import { LanguageOptions } from "./LanguageOptions.enum";
 
 export type SupportedLanguage =
-  (typeof LanguageOptions)[keyof typeof LanguageOptions];
+  | typeof LanguageOptions.EN
+  | typeof LanguageOptions.ES;

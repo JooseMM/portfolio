@@ -1,10 +1,10 @@
 import { NavLink } from "react-router";
 import { ThemeCSSColorOptions } from "../utils/interfaces/ThemeCSSColorOptions.enum";
 import "./footer.style.css";
-import { CONTACT_LIST, type ContactInfo } from "../../contact/contact.utils";
 import { useUI } from "../utils/context/hook.context";
 import { LINKS_OPTIONS } from "../utils/constants.utils";
 import { LanguageOptions } from "../utils/interfaces/LanguageOptions.enum";
+import { CONTENT } from "../utils/context/content.utils";
 
 export const Footer = () => {
   const { preferredLanguage } = useUI();
@@ -45,16 +45,18 @@ export const Footer = () => {
             : "Social Media"}
         </li>
         <li className="footer__icons" style={{ opacity: 1 }}>
-          {CONTACT_LIST.map(({ link, Icon, name }: ContactInfo) => {
-            return (
-              <a href={link} target="_blank" key={name}>
-                <Icon
-                  fillColor={ThemeCSSColorOptions.OCTONARY}
-                  style={{ width: "2rem" }}
-                />
-              </a>
-            );
-          })}
+          {CONTENT[preferredLanguage].contactInfo.map(
+            ({ link, Icon, name }) => {
+              return (
+                <a href={link} target="_blank" key={name}>
+                  <Icon
+                    fillColor={ThemeCSSColorOptions.OCTONARY}
+                    style={{ width: "2rem" }}
+                  />
+                </a>
+              );
+            },
+          )}
         </li>
       </ul>
     </footer>

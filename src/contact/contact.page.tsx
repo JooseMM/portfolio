@@ -4,11 +4,11 @@ import AboutLight from "../assets/about-image-light.png";
 import { useUI } from "../shared/utils/context/hook.context";
 import { ThemeOptions } from "../shared/utils/interfaces/Theme.enum";
 import { ThemeCSSColorOptions } from "../shared/utils/interfaces/ThemeCSSColorOptions.enum";
-import { CONTACT_LIST, type ContactInfo } from "./contact.utils";
 import { useDeviceType } from "../shared/utils/customHooks/useCurrentDeviceType.hook";
 import { DeviceTypeOptions } from "../shared/utils/interfaces/DeviceTypeOptions.enum";
 import { LanguageOptions } from "../shared/utils/interfaces/LanguageOptions.enum";
 import { useScrollToHash } from "../shared/utils/customHooks/useScrollTo.hook";
+import { CONTENT } from "../shared/utils/context/content.utils";
 
 export const ContactPage = () => {
   const { currentTheme, preferredLanguage } = useUI();
@@ -44,25 +44,27 @@ export const ContactPage = () => {
         )}
       </p>
       <ul className="contact__list">
-        {CONTACT_LIST.map(({ link, Icon, visible, name }: ContactInfo) => (
-          <li
-            key={name}
-            className="contact__box"
-            style={{ backgroundColor: ThemeCSSColorOptions.PRIMARY }}
-          >
-            <a href={link} target="_blank">
-              <div className="contact__icon">
-                <Icon
-                  fillColor={ThemeCSSColorOptions.PRIMARY}
-                  style={{ width: "2rem" }}
-                />
-              </div>
-              <span>
-                {deviceType === DeviceTypeOptions.MOBILE ? name : visible}
-              </span>
-            </a>
-          </li>
-        ))}
+        {CONTENT[preferredLanguage].contactInfo.map(
+          ({ link, Icon, visible, name }) => (
+            <li
+              key={name}
+              className="contact__box"
+              style={{ backgroundColor: ThemeCSSColorOptions.PRIMARY }}
+            >
+              <a href={link} target="_blank">
+                <div className="contact__icon">
+                  <Icon
+                    fillColor={ThemeCSSColorOptions.PRIMARY}
+                    style={{ width: "2rem" }}
+                  />
+                </div>
+                <span>
+                  {deviceType === DeviceTypeOptions.MOBILE ? name : visible}
+                </span>
+              </a>
+            </li>
+          ),
+        )}
       </ul>
     </section>
   );

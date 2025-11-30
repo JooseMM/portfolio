@@ -8,11 +8,12 @@ import { ThemeCSSColorOptions } from "../../../../shared/utils/interfaces/ThemeC
 import "./project.style.css";
 
 export interface Props {
-  title: string;
-  description: { [LanguageOptions.ES]: string; [LanguageOptions.EN]: string };
+  name: string;
+  type: string;
+  description: string;
   desktopImage: string;
   mobileImage: string;
-  skillList: Skill[];
+  techStack: Skill[];
   className?: string;
   codeLink?: string;
   websiteLink?: string;
@@ -25,13 +26,13 @@ export const Project = ({
   codeLink,
   websiteLink,
   description,
-  title,
+  name,
+  type,
   className,
-  skillList,
+  techStack,
   isVertical = false,
 }: Props) => {
   const { currentTheme, preferredLanguage } = useUI();
-  const [appName, ...appType] = title.split(" ");
 
   return (
     <div
@@ -52,15 +53,15 @@ export const Project = ({
         <img className="project__mobile" src={mobileImage} />
         <img className="project__desktop" src={desktopImage} />
       </div>
-      {isVertical ? null : <SkillBar skillList={skillList} isVertical={true} />}
+      {isVertical ? null : <SkillBar techStack={techStack} isVertical={true} />}
       <div className="project__description">
         <h3>
-          {appName} <b>{appType.join(" ")}</b>
+          {name} <b>{type}</b>
         </h3>
-        <p>{description[preferredLanguage]}</p>
+        <p>{description}</p>
         {isVertical ? (
           <SkillBar
-            skillList={skillList}
+            techStack={techStack}
             isVertical={false}
             style={{ marginTop: "0.5rem" }}
           />

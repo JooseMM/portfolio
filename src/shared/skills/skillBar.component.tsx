@@ -2,7 +2,7 @@ import { SKILL_LIST, type SkillBarProps } from "./skillBar.utils";
 import "./skillBar.style.css";
 
 export const SkillBar = ({
-  skillList,
+  techStack,
   isVertical = false,
   style,
 }: SkillBarProps) => {
@@ -11,7 +11,7 @@ export const SkillBar = ({
       className={`skill_bar ${isVertical ? "skill_bar--vertical" : ""}`}
       style={style}
     >
-      {skillList.map((skill) => {
+      {techStack.map((skill) => {
         const Icon = SKILL_LIST[skill];
         return <Icon key={skill} />;
       })}

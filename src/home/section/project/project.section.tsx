@@ -4,11 +4,12 @@ import { useUI } from "../../../shared/utils/context/hook.context";
 import { ThemeCSSColorOptions } from "../../../shared/utils/interfaces/ThemeCSSColorOptions.enum";
 import { ThemeOptions } from "../../../shared/utils/interfaces/Theme.enum";
 import { Project } from "./components/project.component";
-import { PROJECT_LIST } from "./project.utils";
 import { useDeviceType } from "../../../shared/utils/customHooks/useCurrentDeviceType.hook";
 import { DeviceTypeOptions } from "../../../shared/utils/interfaces/DeviceTypeOptions.enum";
 import { LanguageOptions } from "../../../shared/utils/interfaces/LanguageOptions.enum";
 import type { SectionId } from "../../../shared/utils/interfaces/SectionId.type";
+import { CONTENT } from "../../../shared/utils/context/content.utils";
+import { useEffect } from "react";
 
 export const ProjectSection = ({ id }: SectionId) => {
   const { currentTheme, preferredLanguage } = useUI();
@@ -29,7 +30,7 @@ export const ProjectSection = ({ id }: SectionId) => {
         </h2>
       </TitleWrapper>
       <div className="project_section__list">
-        {PROJECT_LIST.map(({ isVertical, ...project }, index) => (
+        {CONTENT[preferredLanguage].projectList.map(({ isVertical, ...project }, index) => (
           <Project
             {...project}
             key={index}

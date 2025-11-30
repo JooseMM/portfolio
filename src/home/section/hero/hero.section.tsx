@@ -7,6 +7,7 @@ import { SkillOptions } from "../../../shared/utils/interfaces/SkillOptions.enum
 import { useUI } from "../../../shared/utils/context/hook.context";
 import { LanguageOptions } from "../../../shared/utils/interfaces/LanguageOptions.enum";
 import type { SectionId } from "../../../shared/utils/interfaces/SectionId.type";
+import { CONTENT } from "../../../shared/utils/context/content.utils";
 
 export const HeroSection = ({ id }: SectionId) => {
   const { preferredLanguage } = useUI();
@@ -27,11 +28,7 @@ export const HeroSection = ({ id }: SectionId) => {
             </>
           )}
         </h1>
-        <p>
-          {preferredLanguage === LanguageOptions.ES
-            ? "Hola! mi nombre es Jose Moreno, un desarrollador web autodidacta, con bases fuertes en diseño de UI UX."
-            : "Hello! My name is Jose Moreno, a self-taught web developer with strong foundations in UI/UX design."}
-        </p>
+        <p>{CONTENT[preferredLanguage].heroParagraph}</p>
         <div>
           <Button to="/contact/#navbar">
             {preferredLanguage === LanguageOptions.ES
@@ -48,7 +45,7 @@ export const HeroSection = ({ id }: SectionId) => {
           </a>
         </div>
         <SkillBar
-          skillList={[
+          techStack={[
             SkillOptions.ANGULAR,
             SkillOptions.REACT,
             SkillOptions.ANDROID,

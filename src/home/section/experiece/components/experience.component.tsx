@@ -1,15 +1,15 @@
+import type { Experience } from "../../../../shared/utils/interfaces/Experience.type";
 import { ThemeCSSColorOptions } from "../../../../shared/utils/interfaces/ThemeCSSColorOptions.enum";
-import type { ExperienceInfo } from "../experience.utils";
 import "./experience.style.css";
 
 export const ExperienceBox = ({
-  jobTitle,
-  company,
+  role,
+  companyName,
   description,
   image,
-  year,
+  from,
   isSecundary = false,
-}: ExperienceInfo & { isSecundary?: boolean }) => {
+}: Experience & { isSecundary?: boolean }) => {
   return (
     <li
       style={{
@@ -18,16 +18,19 @@ export const ExperienceBox = ({
       className={`experience__box ${isSecundary ? "experience__box--secundary" : ""}`}
     >
       <div className="experience__box__description">
-        <span>{company}</span>
+        <span>{companyName}</span>
         <h3>
-          {jobTitle} - {year}
+          {role} - {from}
         </h3>
         <p>{description}</p>
       </div>
       <div
         className="experience__box__image"
         style={{
-          backgroundColor: ThemeCSSColorOptions.SECUNDARY,
+          backgroundColor:
+            companyName === "Totalpack"
+              ? ThemeCSSColorOptions.QUINARY
+              : ThemeCSSColorOptions.SECUNDARY,
         }}
       >
         <img src={image} />

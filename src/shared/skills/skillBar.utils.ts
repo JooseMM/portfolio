@@ -13,6 +13,7 @@ import { KotlinIcon } from "./components/kotlin.icon";
 import { MongoDBIcon } from "./components/mongoDB.icon";
 import { NestJSIcon } from "./components/nestJS.icon";
 import { ReactIcon } from "./components/react.icon";
+import { SQLIcon } from "./components/sql.icon";
 import { TailwindCSSIcon } from "./components/tailwindCSS.icon";
 import { TypescriptIcon } from "./components/typescript.icon";
 
@@ -35,10 +36,11 @@ export const SKILL_LIST = {
   [SkillOptions.KOTLIN]: KotlinIcon,
   [SkillOptions.ANDROID]: AndroidIcon,
   [SkillOptions.FIGMA]: FigmaIcon,
+  [SkillOptions.SQL]: SQLIcon,
 };
 
 export interface SkillBarProps {
-  skillList: Skill[];
+  techStack: Skill[];
   isVertical?: boolean;
   style?: React.CSSProperties;
 }

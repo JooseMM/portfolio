@@ -7,6 +7,7 @@ import { HomePage } from "./home/home.page";
 import { UIProvider } from "./shared/utils/context/provider.context";
 import { Footer } from "./shared/footer/footer.section";
 import { ContactPage } from "./contact/contact.page";
+import { PDFGenerator } from "./pdf-generator/pdf-generator.page";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/temp" element={<PDFGenerator />} />
         </Routes>
         <Footer />
       </BrowserRouter>
