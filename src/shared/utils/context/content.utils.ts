@@ -27,6 +27,12 @@ export interface ContactInfo {
 
 export const CONTACT_LIST: ContactInfo[] = [
   {
+    name: "Email",
+    link: "mailto:jamm.webdev@gmail.com",
+    visible: "jamm.webdev@gmail.com",
+    Icon: EmailIcon,
+  },
+  {
     name: "Whatsapp",
     link: "https://wa.me/56932845558?text=Hola%21%20Vengo%20de%20tu%20portafolio,%20me%20gustaria%20saber%20mas%20sobre%20ti.",
     visible: "(+56) 9 3284 5558",
@@ -44,12 +50,6 @@ export const CONTACT_LIST: ContactInfo[] = [
     visible: "linkedin.com/in/jamm-dev",
     Icon: LinkedinIcon,
   },
-  {
-    name: "Email",
-    link: "mailto:jamm.webdev@gmail.com",
-    visible: "jamm.webdev@gmail.com",
-    Icon: EmailIcon,
-  },
 ];
 export const CONTENT: ContentOptions = {
   [LanguageOptions.ES]: {
@@ -66,8 +66,7 @@ export const CONTENT: ContentOptions = {
         role: "Desarrollador Full Stack",
         description:
           "Desarrollo de aplicaciones web con Angular. Backend con NestJS, Node.js y TypeScript, autenticación JWT y pasarelas de pago. Experiencia con TypeORM, MongoDB, Git y pruebas automatizadas.",
-        from: 2025,
-        until: 2025,
+        from: "2025",
         image: Freelance,
       },
       {
@@ -75,8 +74,7 @@ export const CONTENT: ContentOptions = {
         role: "Desarrollador Full Stack (Practica)",
         description:
           "Desarrollo web y móvil con Angular, NestJS, Kotlin y Android. Experiencia en microservicios con Node.js y TypeScript, autenticación JWT, pasarelas de pago, bases de datos SQL/NoSQL, control de versiones con Git y metodologías ágiles con JIRA.",
-        from: 2025,
-        until: 2025,
+        from: "2025",
         image: Intelsoft,
       },
       {
@@ -84,7 +82,8 @@ export const CONTENT: ContentOptions = {
         role: "Desarrollador Front-end",
         description:
           "Desarrollador Frontend especializado en Angular, creando dashboards interactivos y software de gestión de turnos para empresas líderes. Trabajo con Angular 12–20, Bootstrap, CSS puro y WebSockets para soluciones dinámicas y eficientes",
-        from: 2025,
+        from: "2025",
+	until: 'Actual',
         image: Totalpack,
       },
     ],
@@ -159,9 +158,9 @@ export const CONTENT: ContentOptions = {
     heroParagraph:
       "Hello! My name is Jose Moreno, a self-taught web developer with strong foundations in UI/UX design.",
     education: [
-      "Curso NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
-      "Curso GIT - Desafío Latam",
-      "Curso Master Web Api ASP NET Core 9",
+      "Course NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
+      "Course GIT - Desafío Latam",
+      "Course Master Web Api ASP NET Core 9",
     ],
     experienceList: [
       {
@@ -169,8 +168,7 @@ export const CONTENT: ContentOptions = {
         role: "Full-stack Developer",
         description:
           "Development of web applications with Angular and native mobile apps on Android using Kotlin. Backend with NestJS, Node.js, and TypeScript in microservices, JWT authentication, and payment gateways. Experience with TypeORM, MongoDB, Git, and automated testing.",
-        from: 2025,
-        until: 2025,
+        from: "2025",
         image: Freelance,
       },
       {
@@ -178,8 +176,7 @@ export const CONTENT: ContentOptions = {
         role: "Full-stack Developer (Internship)",
         description:
           "Web and mobile development with Angular, NestJS, Kotlin, and Android. Experience with microservices using Node.js and TypeScript, JWT authentication, payment gateways, SQL/NoSQL databases, version control with Git, and agile methodologies with JIRA.",
-        from: 2025,
-        until: 2025,
+        from: "2025",
         image: Intelsoft,
       },
       {
@@ -187,18 +184,19 @@ export const CONTENT: ContentOptions = {
         role: "Front-end Developer",
         description:
           "Frontend Developer specialized in Angular, creating interactive dashboards and shift management software for leading companies. I work with Angular 12–20, Bootstrap, pure CSS, and WebSockets to deliver dynamic and efficient solutions",
-        from: 2025,
+        from: "2025",
+	until: 'Currently',
         image: Totalpack,
       },
     ],
     skills: [
       "Angular",
       "Typescript",
-      "Patrones de Diseño",
+      "Design Patterns",
       "GIT",
       "HTML",
       "CSS",
-      "Diseño de UX UI",
+      "UX UI Design",
       "SQL",
       "MongoDB",
       "Express.js",
@@ -206,7 +204,7 @@ export const CONTENT: ContentOptions = {
       "NestJS",
       "TailwindCSS",
       "Linux",
-      "Inglés Avanzado",
+      "Advance English",
     ],
     projectList: [
       {

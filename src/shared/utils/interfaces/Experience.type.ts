@@ -1,8 +1,8 @@
 export interface Experience {
   companyName: string;
   role: string;
-  from: number;
-  until?: number;
+  from: string;
+  until?: string;
   image: string;
   description: string;
 }

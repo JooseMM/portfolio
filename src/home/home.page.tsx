@@ -4,6 +4,7 @@ import { ExperienceSection } from "./section/experiece/experience.section";
 import { HeroSection } from "./section/hero/hero.section";
 import { ProjectSection } from "./section/project/project.section";
 import { useScrollToHash } from "../shared/utils/customHooks/useScrollTo.hook";
+import { PDFButton } from "../pdf/components/pdf-button/PDFButton.component";
 
 export const HomePage = () => {
   useScrollToHash();
@@ -15,6 +16,7 @@ export const HomePage = () => {
       <ExperienceSection id="experience" />
       <AboutSection id="about" />
       <CTASection />
+      <PDFButton />
     </main>
   );
 };

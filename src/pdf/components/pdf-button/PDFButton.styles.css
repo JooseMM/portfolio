@@ -1,0 +1,48 @@
+.button--pdf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  padding: 0.8rem 2.5rem;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  border-radius: 0.3rem;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0, 64, 64, 0.7);
+  animation: float 2s ease-in-out infinite;
+}
+.button--pdf:hover {
+  animation: unset;
+}
+
+.button--pdf > img {
+ width: 1.5rem;
+}
+.button--pdf .spinner {
+  width: 1.5rem;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

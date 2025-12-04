@@ -1,13 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 import { Navbar } from "./shared/navbar/navbar.component";
 import { HomePage } from "./home/home.page";
 import { UIProvider } from "./shared/utils/context/provider.context";
 import { Footer } from "./shared/footer/footer.section";
 import { ContactPage } from "./contact/contact.page";
-import { PDFGenerator } from "./pdf-generator/pdf-generator.page";
+import { PDFGenerator } from "./pdf/pdf.page";
+
+const isDevelopment = import.meta.env.DEV;
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,7 +19,8 @@ createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/temp" element={<PDFGenerator />} />
+          {isDevelopment && <Route path="/temp" element={<PDFGenerator />} />}
+	  <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
       </BrowserRouter>
