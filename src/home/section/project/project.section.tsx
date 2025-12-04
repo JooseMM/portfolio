@@ -9,7 +9,6 @@ import { DeviceTypeOptions } from "../../../shared/utils/interfaces/DeviceTypeOp
 import { LanguageOptions } from "../../../shared/utils/interfaces/LanguageOptions.enum";
 import type { SectionId } from "../../../shared/utils/interfaces/SectionId.type";
 import { CONTENT } from "../../../shared/utils/context/content.utils";
-import { useEffect } from "react";
 
 export const ProjectSection = ({ id }: SectionId) => {
   const { currentTheme, preferredLanguage } = useUI();
