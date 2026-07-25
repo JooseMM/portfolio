@@ -12,6 +12,7 @@ export const SQLIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>SQL Icon</title>
       <path
         d="M16.1251 17.3711C14.5055 17.3711 13.572 19.0844 13.572 21.2023C13.5561 23.3524 14.5214 24.9994 16.1092 24.9994C17.7121 24.9994 18.6472 23.3691 18.6472 21.1519C18.6472 19.0844 17.7437 17.3711 16.1251 17.3711Z"
         fill={getSkillColor(currentTheme)}

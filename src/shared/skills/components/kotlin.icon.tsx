@@ -12,6 +12,7 @@ export const KotlinIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Kotlin Icon</title>
       <path
         d="M36.8079 36.8076H1.19238V1.19214H36.8079L19.0001 18.9999L36.8079 36.8076Z"
         fill={currentTheme === ThemeOptions.DARK ? "#BECCCC" : "#BECCCC"}

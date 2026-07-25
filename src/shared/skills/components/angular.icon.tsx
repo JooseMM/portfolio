@@ -13,6 +13,7 @@ export const AngularIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Angular Icon</title>
       <path
         d="M17.6406 0L0.375 6.25L3.03125 27.5L17.6406 35L32.25 27.5L34.9062 6.25L17.6406 0Z"
         fill={getSkillColor(currentTheme)}

@@ -14,7 +14,7 @@ export const HeroSection = ({ id }: SectionId) => {
   return (
     <section className="hero" id={id}>
       <div className="hero__image">
-        <img src={HeroImage} />
+        <img src={HeroImage} alt="profile portrait" />
       </div>
       <div className="hero__description">
         <h1>
@@ -47,10 +47,11 @@ export const HeroSection = ({ id }: SectionId) => {
         <SkillBar
           techStack={[
             SkillOptions.ANGULAR,
+            SkillOptions.DOTNET,
             SkillOptions.REACT,
-            SkillOptions.ANDROID,
-            SkillOptions.NESTJS,
             SkillOptions.EXPRESS,
+            SkillOptions.SQL,
+            SkillOptions.TAILWINDCSS,
           ]}
         />
       </div>

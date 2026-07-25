@@ -6,6 +6,7 @@ import { ThemeCSSColorOptions } from "../utils/interfaces/ThemeCSSColorOptions.e
 import { AndroidIcon } from "./components/android.icon";
 import { AngularIcon } from "./components/angular.icon";
 import { CSSIcon } from "./components/css.icon";
+import { DotnetIcon } from "./components/dotnet.icon";
 import { ExpressIcon } from "./components/express.icon";
 import { FigmaIcon } from "./components/figman.icon";
 import { HTMLIcon } from "./components/html.icon";
@@ -37,6 +38,7 @@ export const SKILL_LIST = {
   [SkillOptions.ANDROID]: AndroidIcon,
   [SkillOptions.FIGMA]: FigmaIcon,
   [SkillOptions.SQL]: SQLIcon,
+  [SkillOptions.DOTNET]: DotnetIcon,
 };
 
 export interface SkillBarProps {

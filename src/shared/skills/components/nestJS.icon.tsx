@@ -12,6 +12,7 @@ export const NestJSIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>NestJS Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

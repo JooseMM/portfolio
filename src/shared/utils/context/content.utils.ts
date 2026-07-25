@@ -79,11 +79,11 @@ export const CONTENT: ContentOptions = {
       },
       {
         companyName: "Totalpack",
-        role: "Desarrollador Front-end",
+        role: "Desarrollador Software",
         description:
-          "Desarrollador Frontend especializado en Angular, creando dashboards interactivos y software de gestión de turnos para empresas líderes. Trabajo con Angular 12–20, Bootstrap, CSS puro y WebSockets para soluciones dinámicas y eficientes",
+          "Desarrollo de software para gestión de turnos multicliente y multiplataforma implementando arquitectura hexagonal y patrones BFF (Backend For Frontend). Soluciones full-stack construidas con .NET, Express.js y Angular (v12–20), integradas con bases de datos SQL Server y MySQL.",
         from: "2025",
-	until: 'Actual',
+        until: "Actual",
         image: Totalpack,
       },
     ],
@@ -181,11 +181,11 @@ export const CONTENT: ContentOptions = {
       },
       {
         companyName: "Totalpack",
-        role: "Front-end Developer",
+        role: "Software Developer",
         description:
-          "Frontend Developer specialized in Angular, creating interactive dashboards and shift management software for leading companies. I work with Angular 12–20, Bootstrap, pure CSS, and WebSockets to deliver dynamic and efficient solutions",
+          "Software development for multi-client and multi-platform queue management implementing hexagonal architecture and BFF (Backend For Frontend) patterns. Full-stack solutions built with .NET, Express.js, and Angular (v12–20), integrated with SQL Server and MySQL databases.",
         from: "2025",
-	until: 'Currently',
+        until: "Currently",
         image: Totalpack,
       },
     ],

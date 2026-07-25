@@ -12,4 +12,5 @@ export const SkillOptions = {
   SQL: "SQL",
   KOTLIN: "Kotlin",
   ANDROID: "Android",
+  DOTNET: "DOTNET",
 };

@@ -12,6 +12,7 @@ export const HTMLIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>HTML Icon</title>
       <path
         d="M3.6792 0H5.52715V1.82578H7.2176V0H9.06564V5.52892H7.21769V3.67751H5.52724V5.52892H3.67927L3.6792 0Z"
         fill={getSkillColor(currentTheme)}

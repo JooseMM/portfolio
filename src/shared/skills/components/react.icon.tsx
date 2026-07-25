@@ -12,6 +12,7 @@ export const ReactIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>React Icon</title>
       <path
         d="M23.9801 16.2199C23.9801 14.4269 22.3873 12.9731 20.4222 12.9731C18.4573 12.9731 16.8643 14.4269 16.8643 16.2199C16.8643 18.0131 18.4573 19.4667 20.4222 19.4667C22.3873 19.4667 23.9801 18.0131 23.9801 16.2199Z"
         fill={getSkillColor(currentTheme)}

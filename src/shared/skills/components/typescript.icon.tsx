@@ -12,6 +12,7 @@ export const TypescriptIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Typescript Icon</title>
       <path
         d="M35.445 0H1.7425C0.780144 0 0 0.734253 0 1.64V33.36C0 34.2657 0.780144 35 1.7425 35H35.445C36.4074 35 37.1875 34.2657 37.1875 33.36V1.64C37.1875 0.734253 36.4074 0 35.445 0Z"
         fill={getSkillColor(currentTheme)}

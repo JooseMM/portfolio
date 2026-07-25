@@ -12,6 +12,7 @@ export const FigmaIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <title>Figma Icon</title>
       <path
         opacity="0.6"
         d="M10.6668 0H5.33336C2.38782 0 0 2.38782 0 5.33336C0 8.27889 2.38782 10.6667 5.33336 10.6667H10.6668V0Z"
